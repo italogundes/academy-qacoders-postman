@@ -133,9 +133,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"/*pm.test('Status coide is 201', () => {\r",
+									"pm.test('Status coide is 201', () => {\r",
 									"    pm.response.to.have.status(201);\r",
-									"});*/\r",
+									"});\r",
 									"\r",
 									"pm.test('Validação de Nome informado', () => {\r",
 									"    pm.expect(pm.response.json().user).to.have.property('fullName');\r",
@@ -409,9 +409,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"/*pm.test('Status coide is 400', () => {\r",
+									"pm.test('Status coide is 400', () => {\r",
 									"    pm.response.to.have.status(400);\r",
-									"})*/"
+									"})"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -514,9 +514,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"/*pm.test('Status code is 400', () => {\r",
+									"pm.test('Status code is 400', () => {\r",
 									"    pm.response.to.have.status(400);\r",
-									"});*/"
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -986,14 +986,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{BaseUrl}}/api/user/67a6036ae8510a694b596160",
+									"raw": "{{BaseUrl}}/api/user/{{idUser}}",
 									"host": [
 										"{{BaseUrl}}"
 									],
 									"path": [
 										"api",
 										"user",
-										"67a6036ae8510a694b596160"
+										"{{idUser}}"
 									]
 								}
 							},
@@ -1874,7 +1874,7 @@
 									"apikey": [
 										{
 											"key": "value",
-											"value": "{{TokenUser}}",
+											"value": "{{TokenAdm}}",
 											"type": "string"
 										},
 										{
@@ -1887,14 +1887,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{BaseUrl}}/api/user/67a2b0dfe8510a694b5949f9",
+									"raw": "{{BaseUrl}}/api/user/{{idUser}}",
 									"host": [
 										"{{BaseUrl}}"
 									],
 									"path": [
 										"api",
 										"user",
-										"67a2b0dfe8510a694b5949f9"
+										"{{idUser}}"
 									]
 								}
 							},
@@ -2268,9 +2268,9 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"/*pm.test('status code is 200', () => {\r",
+											"pm.test('status code is 200', () => {\r",
 											"    pm.response.to.have.status(200);\r",
-											"});*/"
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -2406,9 +2406,9 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"/*pm.test('status code is 200', () => {\r",
+											"pm.test('status code is 200', () => {\r",
 											"    pm.response.to.have.status(200);\r",
-											"});*/\r",
+											"});\r",
 											"\r",
 											"pm.test('Validate message response', () => {\r",
 											"    pm.expect('Endereço da companhia atualizado com sucesso.').to.be.equals(pm.response.json().msg);\r",
